@@ -1,0 +1,5 @@
+Software para windows, linux y Mac: https://www.livechesscloud.com/software/
+
+Para usar el modo DGT con el Centaur, debe instalar los controladores del plugin Rabbit en su sistema Windows. A continuación, inicie el modo DGT en el Centaur, emparéjelo con su PC y conéctelo. Ahora, en el plugin Rabbit, seleccione el puerto COM correspondiente asignado a la conexión Bluetooth por el PC. Aparecerá un mensaje de confirmación en el plugin Rabbit indicando que se ha conectado una placa DGT.
+
+Probé el modo DGT de Centaur con Fritz, entre otras cosas, y pude jugar ajedrez en línea sin problemas, además de usar el Centaur directamente en el programa de ajedrez Fritz. Es importante también habilitar el modo LED de Revelation II en la configuración del plugin Rabbit. En esencia, el Centaur no emula una placa DGT, sino una Revelation II AE con LED. Es decir, una placa DGT con LED. Esto controla correctamente los LED del Centaur.

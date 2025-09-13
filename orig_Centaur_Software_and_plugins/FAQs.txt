@@ -1,0 +1,4 @@
+
+- How to generate Lichess key to be inserted in the chessboard lichess configuration section:
+
+Here is possible to generate a key: https://lichess.org/dgt/config

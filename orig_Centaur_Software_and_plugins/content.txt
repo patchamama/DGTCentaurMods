@@ -1,0 +1,17 @@
+
+- centaur_summerfield_topschach_edition.7z
+
+Image of "DGT Centaur DS TS Edition V0.99" 20210605 without Rings
+
+
+- oldcentaur-before-2020.7z 
+
+Image of "DGT Centaur DS TS Edition V0.99" 20210607 with Rings
+
+Change the password of the image saved in the sdcard:
+ 1. `lsblk -f` OR `sudo fdisk -l` to see the partitions.
+ 2. Mount partition: `sudo mkdir -p /mnt/rpi && sudo mount /dev/sdX2 /mnt/rpi` (change /dev/sdX2 for the partition with the ext4 and content: /dev /home...)
+ 3. Create password to be replaced, example: raspberry: `openssl passwd -1 raspberry`. Replace in the `/etc/shadow` the password of pi or root for the new password. (`nano /etc/shadow`) 
+ 4. `sudo umount /dev/sdX2`
+
+- software_factory_centaur_ald_without_rings.tar.gz and software_factory_centaur_with_rings.tar.gz are the software to run centaur in folder `/home/pi/centaur`

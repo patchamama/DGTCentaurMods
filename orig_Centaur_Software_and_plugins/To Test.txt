@@ -1,0 +1,10 @@
+
+- Update stockfish to the last version (v7): https://stockfishchess.org/download/ Ex: https://github.com/official-stockfish/Stockfish/releases/latest/download/stockfish-android-armv7.tar 
+
+- Connect the dot centaur to DGT-Pi and check it!
+
+- Test to use software Tornelo to do matchs with other dgt centaur.
+
+- Probar en windows usando la driver Rabbit para jugar con lucaschess o Arena. (Rabbit conectado a dgt centaur: https://schach.computer/wp-content/uploads/2021/10/FBHbUeXXsAA0DCF.png)
+
+- Instructions to hack the dgt centaur and change de raspberry pi and card: https://schach.computer/dgt-centaur-v2-das-finale-release/
