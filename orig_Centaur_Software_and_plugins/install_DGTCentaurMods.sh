@@ -11,7 +11,13 @@ wget https://raw.githubusercontent.com/patchamama/DGTCentaurMods/refs/heads/mast
 
 wget https://raw.githubusercontent.com/patchamama/DGTCentaurMods/refs/heads/master/orig_Centaur_Software_and_plugins/centaur_ald_with_ring.zip
 unzip centaur_ald_with_ring.zip
-chmod +x centaur/centaur
-cp S03centaur /etc/init.d 
-chmod +x /etc/init.d/S03centaur
+sudo chmod +x centaur/centaur
+sudo cp S03centaur /etc/init.d 
+sudo chmod +x /etc/init.d/S03centaur
+
+wget https://raw.githubusercontent.com/patchamama/DGTCentaurMods/refs/heads/master/orig_Centaur_Software_and_plugins/centaur.service
+sudo cp centaur.service /etc/systemd/system/centaur.service
+sudo systemctl daemon-reload
+sudo systemctl enable centaur.service
+sudo systemctl start centaur.service
 

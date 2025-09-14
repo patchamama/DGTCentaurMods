@@ -1,0 +1,13 @@
+[Unit]
+Description=Centaur startup script
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/centaur
+ExecStart=/bin/bash -c 'echo "ready pgn please remove USB-stick"; ./centaur'
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
