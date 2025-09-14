@@ -1,0 +1,11 @@
+export PYTHONPATH=/opt
+cd /opt/DGTCentaurMods/web
+authbind --deep flask run --host=0.0.0.0 --port=80
+
+
+systemctl restart DGTCentaurMods.service
+
+systemctl restart DGTCentaurModsWeb.service
+
+systemctl status DGTCentaurMods.service
+systemctl status DGTCentaurModsWeb.service

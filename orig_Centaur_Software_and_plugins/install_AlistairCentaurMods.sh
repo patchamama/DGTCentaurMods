@@ -43,6 +43,13 @@ pip3 install --user --upgrade "MarkupSafe>=2.1.1"
 pip3 install --user --upgrade Pillow>=10.0.1
 pip3 install --upgrade --force-reinstall PyGithub==1.55
 
+wget https://raw.githubusercontent.com/patchamama/DGTCentaurMods/refs/heads/master/orig_Centaur_Software_and_plugins/DGTCentaurModsWeb.service
+sudo cp DGTCentaurModsWeb.service /etc/systemd/system/DGTCentaurModsWeb.service
+sudo cp /etc/systemd/system/DGTCentaurModsWeb.service /etc/systemd/system/DGTCentaurModsWeb.service.backup
+sudo systemctl daemon-reload
+sudo systemctl restart DGTCentaurModsWeb.service
+sudo systemctl status DGTCentaurModsWeb.service
+
 
 # Install one by one every python package
 # while read req; do echo ">>> Instalando $req"; pip3 install --user "$req"; done < pip-requirements.txt
