@@ -1,0 +1,13 @@
+[Unit]
+Description=DGTCentaurMods update service
+After=network.target
+
+[Service]
+RemainAfterExit=no
+Environment=PYTHONUNBUFFERED=1
+ExecStart=python3 /opt/DGTCentaurMods/scripts/auto_update.py
+Restart=no
+User=pi
+
+[Install]
+WantedBy=multi-user.target

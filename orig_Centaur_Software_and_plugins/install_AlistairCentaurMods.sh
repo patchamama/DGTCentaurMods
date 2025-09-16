@@ -1,5 +1,12 @@
 sudo apt-get update
 
+cd /home/pi
+python3 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install -r /opt/DGTCentaurMods/setup/pip-requirements.txt
+pip install -r /opt/DGTCentaurMods_1.3.3/setup/pip-requirements.txt
+
 # sudo apt install ntp -y
 
 # wget https://github.com/EdNekebno/DGTCentaurMods/releases/download/v1.3.3/dgtcentaurmods_1.3.3_armhf.deb
@@ -52,14 +59,19 @@ sudo systemctl status DGTCentaurModsWeb.service
 
 
 # Install one by one every python package
-# while read req; do echo ">>> Instalando $req"; pip3 install --user "$req"; done < pip-requirements.txt
+# while read req; do echo ">>> Instalando $req"; pip3 install "$req"; done < /opt/DGTCentaurMods/setup/requirements.txt
 
 # Desinstall all the package and install every again with the correct version:
-# while read req; do echo ">>> Reinstalando $req"; pip3 uninstall -y $(echo $req | cut -d'=' -f1); pip3 install --user "$req"; done < pip-requirements.txt
+# while read req; do echo ">>> Instalando $req"; pip3 uninstall -y $(echo $req | cut -d'=' -f1); pip3 install "$req"; done < /opt/DGTCentaurMods/setup/requirements.txt
 
 # pip3 install --user -r /opt/DGTCentaurMods/config/requirements.txt
+
+pip3 install --upgrade "MarkupSafe>=2.1.1"
+pip3 install --upgrade Pillow>=10.0.1
+pip3 install --upgrade --force-reinstall PyGithub==1.55
 
 # cd /opt/DGTCentaurMods/web
 # export PYTHONPATH=/opt
 # authbind --deep flask run --host=0.0.0.0 --port=80
+# authbind --deep /home/pi/venv/bin/flask run --host=0.0.0.0 --port=80
 
