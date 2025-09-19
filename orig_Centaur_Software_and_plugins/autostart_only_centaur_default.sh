@@ -1,0 +1,2 @@
+sudo bash force_stop_DGT_services.sh
+sudo bash activate_only_service.sh centaur

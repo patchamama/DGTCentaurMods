@@ -1,0 +1,1 @@
+sudo bash activate_only_service.sh DGTCentaurMods_Alistair

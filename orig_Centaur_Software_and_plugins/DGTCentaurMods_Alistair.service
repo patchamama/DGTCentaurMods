@@ -1,12 +1,12 @@
 [Unit]
 Description=DGTCentaurMods app
-After=network.target DGTCentaurMods_1.3.3.service
+After=network.target DGTCentaurMods_Alistair.service
 
 [Service]
 Environment=PYTHONUNBUFFERED=1
 ExecStartPre=/bin/sleep 4
 ExecStart=python3 main.py
-WorkingDirectory=/opt/DGTCentaurMods_1.3.3
+WorkingDirectory=/opt/DGTCentaurMods_Alistair
 Environment="PYTHONPATH=/opt"
 Restart=no
 User=pi

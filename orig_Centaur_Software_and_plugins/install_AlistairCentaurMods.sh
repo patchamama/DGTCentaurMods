@@ -1,13 +1,13 @@
-sudo apt-get update
+# sudo apt-get update
 
-cd /home/pi
-python3 -m venv venv
-source venv/bin/activate
-pip install --upgrade pip
-pip install -r /opt/DGTCentaurMods/setup/pip-requirements.txt
-pip install -r /opt/DGTCentaurMods_1.3.3/setup/pip-requirements.txt
+# cd /home/pi
+# python3 -m venv venv
+# source venv/bin/activate
+# pip install --upgrade pip
+# pip install -r /opt/DGTCentaurMods/setup/pip-requirements.txt
+# pip install -r /opt/DGTCentaurMods_1.3.3/setup/pip-requirements.txt
 
-# sudo apt install ntp -y
+sudo apt install ntp -y
 
 # wget https://github.com/EdNekebno/DGTCentaurMods/releases/download/v1.3.3/dgtcentaurmods_1.3.3_armhf.deb
 
@@ -18,9 +18,9 @@ wget https://raw.githubusercontent.com/patchamama/DGTCentaurMods/refs/heads/mast
 
 wget https://raw.githubusercontent.com/patchamama/DGTCentaurMods/refs/heads/master/orig_Centaur_Software_and_plugins/centaur_ald_with_ring.zip
 unzip centaur_ald_with_ring.zip
-sudo chmod +x centaur/centaur
-sudo cp S03centaur /etc/init.d 
-sudo chmod +x /etc/init.d/S03centaur
+# sudo chmod +x centaur/centaur
+# sudo cp S03centaur /etc/init.d 
+# sudo chmod +x /etc/init.d/S03centaur
 
 wget https://raw.githubusercontent.com/patchamama/DGTCentaurMods/refs/heads/master/orig_Centaur_Software_and_plugins/centaur.service
 sudo cp centaur.service /etc/systemd/system/centaur.service
